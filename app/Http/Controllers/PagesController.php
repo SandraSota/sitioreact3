@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Estudiante1;
 use App\Models\estudiante_detalle;
+use App\Models\seguimiento;
 
 class PagesController extends Controller
 {
@@ -14,6 +15,11 @@ class PagesController extends Controller
     public function fnEstDetalle($id) {
         $xDetAlumnos = estudiante_detalle::findOrFail($id); //Datos de BD
         return view('Estudiante.pagDetalle', compact('xDetAlumnos'));
+    }
+
+    public function fnSeguimiento() {
+        $xSegAlumnos = seguimiento::all(); //Datos de BD
+        return view('pagSeguimiento', compact('xSegAlumnos'));
     }
     
     /*public function fnEstDetalle ($id) {

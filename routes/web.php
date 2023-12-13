@@ -10,6 +10,8 @@ Route::post('/',[PagesController::class, 'fnRegistrar']) -> name('Estudiante.xRe
 Route::get('/lista', [PagesController::class, 'fnLista']) -> name('xLista');
 Route::get('/detalle/{id}',[PagesController::class, 'fnEstDetalle']) -> name('Estudiante.xDetalle');
 
+Route::get('/seguimiento', [PagesController::class, 'fnSeguimiento']) -> name('xSegAlumnos');
+
 Route::get('/actualizar/{id}',[PagesController::class, 'fnEstActualizar']) -> name('Estudiante.xActualizar');
 Route::put('/actualizar/{id}',[PagesController::class, 'fnUpdate']) -> name('Estudiante.xUpdate');
 
